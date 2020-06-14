@@ -11,11 +11,11 @@ public class MergeSort {
     }
 
     @SuppressWarnings("rawtypes")
-    public static Comparable[] mergeSort(Comparable[] list)
+    public static void mergeSort(Comparable[] list)
     {
         //If list is empty; no need to do anything
         if (list.length <= 1) {
-            return list;
+            return;
         }
 
         //Split the array in half in two parts
@@ -30,7 +30,6 @@ public class MergeSort {
 
         //Merge both halves together, overwriting to original array
         merge(first, second, list);
-        return list;
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
